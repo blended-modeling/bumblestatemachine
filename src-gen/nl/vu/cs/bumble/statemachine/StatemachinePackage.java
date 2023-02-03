@@ -38,7 +38,7 @@ public interface StatemachinePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.example.org/statemachine";
+	String eNS_URI = "http://nl.vu.cs.bumble/statemachine";
 
 	/**
 	 * The package namespace name.
@@ -141,22 +141,13 @@ public interface StatemachinePackage extends EPackage {
 	int ELEMENT__DESCRIPTION = BASE_CONCEPT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Baseconcept</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__BASECONCEPT = BASE_CONCEPT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = BASE_CONCEPT_FEATURE_COUNT + 2;
+	int ELEMENT_FEATURE_COUNT = BASE_CONCEPT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Element</em>' class.
@@ -214,31 +205,31 @@ public interface StatemachinePackage extends EPackage {
 	int STATE_MACHINE__CURRENTOUTPUT = BASE_CONCEPT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE__INPUT = BASE_CONCEPT_FEATURE_COUNT + 4;
+	int STATE_MACHINE__INPUTS = BASE_CONCEPT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Output</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE__OUTPUT = BASE_CONCEPT_FEATURE_COUNT + 5;
+	int STATE_MACHINE__OUTPUTS = BASE_CONCEPT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Transition</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_MACHINE__TRANSITION = BASE_CONCEPT_FEATURE_COUNT + 6;
+	int STATE_MACHINE__TRANSITIONS = BASE_CONCEPT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' containment reference list.
@@ -296,22 +287,13 @@ public interface StatemachinePackage extends EPackage {
 	int INPUT__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Baseconcept</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__BASECONCEPT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int INPUT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Input</em>' class.
@@ -351,22 +333,13 @@ public interface StatemachinePackage extends EPackage {
 	int OUTPUT__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Baseconcept</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT__BASECONCEPT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Output</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int OUTPUT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Output</em>' class.
@@ -406,22 +379,13 @@ public interface StatemachinePackage extends EPackage {
 	int STATE__DESCRIPTION = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Baseconcept</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__BASECONCEPT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int STATE__OUTPUT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
@@ -430,7 +394,7 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__INPUT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int STATE__INPUT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -439,7 +403,7 @@ public interface StatemachinePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int STATE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -468,15 +432,6 @@ public interface StatemachinePackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITION__DESCRIPTION = ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Baseconcept</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__BASECONCEPT = ELEMENT__BASECONCEPT;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
@@ -576,17 +531,6 @@ public interface StatemachinePackage extends EPackage {
 	EAttribute getElement_Description();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.Element#getBaseconcept <em>Baseconcept</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Baseconcept</em>'.
-	 * @see nl.vu.cs.bumble.statemachine.Element#getBaseconcept()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EReference getElement_Baseconcept();
-
-	/**
 	 * Returns the meta object for class '{@link nl.vu.cs.bumble.statemachine.StateMachine <em>State Machine</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -630,37 +574,37 @@ public interface StatemachinePackage extends EPackage {
 	EReference getStateMachine_Currentoutput();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getInput <em>Input</em>}'.
+	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input</em>'.
-	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getInput()
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
+	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getInputs()
 	 * @see #getStateMachine()
 	 * @generated
 	 */
-	EReference getStateMachine_Input();
+	EReference getStateMachine_Inputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getOutput <em>Output</em>}'.
+	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getOutputs <em>Outputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output</em>'.
-	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getOutput()
+	 * @return the meta object for the containment reference list '<em>Outputs</em>'.
+	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getOutputs()
 	 * @see #getStateMachine()
 	 * @generated
 	 */
-	EReference getStateMachine_Output();
+	EReference getStateMachine_Outputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getTransition <em>Transition</em>}'.
+	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getTransitions <em>Transitions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transition</em>'.
-	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getTransition()
+	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
+	 * @see nl.vu.cs.bumble.statemachine.StateMachine#getTransitions()
 	 * @see #getStateMachine()
 	 * @generated
 	 */
-	EReference getStateMachine_Transition();
+	EReference getStateMachine_Transitions();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link nl.vu.cs.bumble.statemachine.StateMachine#getStates <em>States</em>}'.
@@ -838,14 +782,6 @@ public interface StatemachinePackage extends EPackage {
 		EAttribute ELEMENT__DESCRIPTION = eINSTANCE.getElement_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Baseconcept</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT__BASECONCEPT = eINSTANCE.getElement_Baseconcept();
-
-		/**
 		 * The meta object literal for the '{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl <em>State Machine</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -880,28 +816,28 @@ public interface StatemachinePackage extends EPackage {
 		EReference STATE_MACHINE__CURRENTOUTPUT = eINSTANCE.getStateMachine_Currentoutput();
 
 		/**
-		 * The meta object literal for the '<em><b>Input</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE_MACHINE__INPUT = eINSTANCE.getStateMachine_Input();
+		EReference STATE_MACHINE__INPUTS = eINSTANCE.getStateMachine_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Output</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Outputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE_MACHINE__OUTPUT = eINSTANCE.getStateMachine_Output();
+		EReference STATE_MACHINE__OUTPUTS = eINSTANCE.getStateMachine_Outputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Transition</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE_MACHINE__TRANSITION = eINSTANCE.getStateMachine_Transition();
+		EReference STATE_MACHINE__TRANSITIONS = eINSTANCE.getStateMachine_Transitions();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.

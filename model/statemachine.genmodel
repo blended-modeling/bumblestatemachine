@@ -16,15 +16,14 @@
     <genClasses ecoreClass="statemachine.ecore#//BaseConcept"/>
     <genClasses ecoreClass="statemachine.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Element/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//Element/baseconcept"/>
     </genClasses>
     <genClasses ecoreClass="statemachine.ecore#//StateMachine">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/currentinput"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/currentstate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/currentoutput"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/input"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/output"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/outputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/transitions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/states"/>
     </genClasses>
     <genClasses ecoreClass="statemachine.ecore#//Input"/>

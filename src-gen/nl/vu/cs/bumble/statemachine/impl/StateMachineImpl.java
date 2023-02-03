@@ -37,9 +37,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getCurrentinput <em>Currentinput</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getCurrentstate <em>Currentstate</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getCurrentoutput <em>Currentoutput</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getInput <em>Input</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getOutput <em>Output</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getTransition <em>Transition</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateMachineImpl#getStates <em>States</em>}</li>
  * </ul>
  *
@@ -97,34 +97,34 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 	protected Output currentoutput;
 
 	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Input> input;
+	protected EList<Input> inputs;
 
 	/**
-	 * The cached value of the '{@link #getOutput() <em>Output</em>}' containment reference list.
+	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput()
+	 * @see #getOutputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Output> output;
+	protected EList<Output> outputs;
 
 	/**
-	 * The cached value of the '{@link #getTransition() <em>Transition</em>}' containment reference list.
+	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTransition()
+	 * @see #getTransitions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Transition> transition;
+	protected EList<Transition> transitions;
 
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
@@ -302,11 +302,11 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Input> getInput() {
-		if (input == null) {
-			input = new EObjectContainmentEList<Input>(Input.class, this, StatemachinePackage.STATE_MACHINE__INPUT);
+	public EList<Input> getInputs() {
+		if (inputs == null) {
+			inputs = new EObjectContainmentEList<Input>(Input.class, this, StatemachinePackage.STATE_MACHINE__INPUTS);
 		}
-		return input;
+		return inputs;
 	}
 
 	/**
@@ -314,11 +314,12 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Output> getOutput() {
-		if (output == null) {
-			output = new EObjectContainmentEList<Output>(Output.class, this, StatemachinePackage.STATE_MACHINE__OUTPUT);
+	public EList<Output> getOutputs() {
+		if (outputs == null) {
+			outputs = new EObjectContainmentEList<Output>(Output.class, this,
+					StatemachinePackage.STATE_MACHINE__OUTPUTS);
 		}
-		return output;
+		return outputs;
 	}
 
 	/**
@@ -326,12 +327,12 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Transition> getTransition() {
-		if (transition == null) {
-			transition = new EObjectContainmentEList<Transition>(Transition.class, this,
-					StatemachinePackage.STATE_MACHINE__TRANSITION);
+	public EList<Transition> getTransitions() {
+		if (transitions == null) {
+			transitions = new EObjectContainmentEList<Transition>(Transition.class, this,
+					StatemachinePackage.STATE_MACHINE__TRANSITIONS);
 		}
-		return transition;
+		return transitions;
 	}
 
 	/**
@@ -354,12 +355,12 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case StatemachinePackage.STATE_MACHINE__INPUT:
-			return ((InternalEList<?>) getInput()).basicRemove(otherEnd, msgs);
-		case StatemachinePackage.STATE_MACHINE__OUTPUT:
-			return ((InternalEList<?>) getOutput()).basicRemove(otherEnd, msgs);
-		case StatemachinePackage.STATE_MACHINE__TRANSITION:
-			return ((InternalEList<?>) getTransition()).basicRemove(otherEnd, msgs);
+		case StatemachinePackage.STATE_MACHINE__INPUTS:
+			return ((InternalEList<?>) getInputs()).basicRemove(otherEnd, msgs);
+		case StatemachinePackage.STATE_MACHINE__OUTPUTS:
+			return ((InternalEList<?>) getOutputs()).basicRemove(otherEnd, msgs);
+		case StatemachinePackage.STATE_MACHINE__TRANSITIONS:
+			return ((InternalEList<?>) getTransitions()).basicRemove(otherEnd, msgs);
 		case StatemachinePackage.STATE_MACHINE__STATES:
 			return ((InternalEList<?>) getStates()).basicRemove(otherEnd, msgs);
 		}
@@ -388,12 +389,12 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 			if (resolve)
 				return getCurrentoutput();
 			return basicGetCurrentoutput();
-		case StatemachinePackage.STATE_MACHINE__INPUT:
-			return getInput();
-		case StatemachinePackage.STATE_MACHINE__OUTPUT:
-			return getOutput();
-		case StatemachinePackage.STATE_MACHINE__TRANSITION:
-			return getTransition();
+		case StatemachinePackage.STATE_MACHINE__INPUTS:
+			return getInputs();
+		case StatemachinePackage.STATE_MACHINE__OUTPUTS:
+			return getOutputs();
+		case StatemachinePackage.STATE_MACHINE__TRANSITIONS:
+			return getTransitions();
 		case StatemachinePackage.STATE_MACHINE__STATES:
 			return getStates();
 		}
@@ -421,17 +422,17 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 		case StatemachinePackage.STATE_MACHINE__CURRENTOUTPUT:
 			setCurrentoutput((Output) newValue);
 			return;
-		case StatemachinePackage.STATE_MACHINE__INPUT:
-			getInput().clear();
-			getInput().addAll((Collection<? extends Input>) newValue);
+		case StatemachinePackage.STATE_MACHINE__INPUTS:
+			getInputs().clear();
+			getInputs().addAll((Collection<? extends Input>) newValue);
 			return;
-		case StatemachinePackage.STATE_MACHINE__OUTPUT:
-			getOutput().clear();
-			getOutput().addAll((Collection<? extends Output>) newValue);
+		case StatemachinePackage.STATE_MACHINE__OUTPUTS:
+			getOutputs().clear();
+			getOutputs().addAll((Collection<? extends Output>) newValue);
 			return;
-		case StatemachinePackage.STATE_MACHINE__TRANSITION:
-			getTransition().clear();
-			getTransition().addAll((Collection<? extends Transition>) newValue);
+		case StatemachinePackage.STATE_MACHINE__TRANSITIONS:
+			getTransitions().clear();
+			getTransitions().addAll((Collection<? extends Transition>) newValue);
 			return;
 		case StatemachinePackage.STATE_MACHINE__STATES:
 			getStates().clear();
@@ -461,14 +462,14 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 		case StatemachinePackage.STATE_MACHINE__CURRENTOUTPUT:
 			setCurrentoutput((Output) null);
 			return;
-		case StatemachinePackage.STATE_MACHINE__INPUT:
-			getInput().clear();
+		case StatemachinePackage.STATE_MACHINE__INPUTS:
+			getInputs().clear();
 			return;
-		case StatemachinePackage.STATE_MACHINE__OUTPUT:
-			getOutput().clear();
+		case StatemachinePackage.STATE_MACHINE__OUTPUTS:
+			getOutputs().clear();
 			return;
-		case StatemachinePackage.STATE_MACHINE__TRANSITION:
-			getTransition().clear();
+		case StatemachinePackage.STATE_MACHINE__TRANSITIONS:
+			getTransitions().clear();
 			return;
 		case StatemachinePackage.STATE_MACHINE__STATES:
 			getStates().clear();
@@ -493,12 +494,12 @@ public class StateMachineImpl extends BaseConceptImpl implements StateMachine {
 			return currentstate != null;
 		case StatemachinePackage.STATE_MACHINE__CURRENTOUTPUT:
 			return currentoutput != null;
-		case StatemachinePackage.STATE_MACHINE__INPUT:
-			return input != null && !input.isEmpty();
-		case StatemachinePackage.STATE_MACHINE__OUTPUT:
-			return output != null && !output.isEmpty();
-		case StatemachinePackage.STATE_MACHINE__TRANSITION:
-			return transition != null && !transition.isEmpty();
+		case StatemachinePackage.STATE_MACHINE__INPUTS:
+			return inputs != null && !inputs.isEmpty();
+		case StatemachinePackage.STATE_MACHINE__OUTPUTS:
+			return outputs != null && !outputs.isEmpty();
+		case StatemachinePackage.STATE_MACHINE__TRANSITIONS:
+			return transitions != null && !transitions.isEmpty();
 		case StatemachinePackage.STATE_MACHINE__STATES:
 			return states != null && !states.isEmpty();
 		}

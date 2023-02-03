@@ -2,25 +2,14 @@
  */
 package nl.vu.cs.bumble.statemachine.impl;
 
-import java.util.Collection;
-
 import nl.vu.cs.bumble.statemachine.BaseConcept;
 import nl.vu.cs.bumble.statemachine.Element;
 import nl.vu.cs.bumble.statemachine.Output;
 import nl.vu.cs.bumble.statemachine.StatemachinePackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.OutputImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.OutputImpl#getBaseconcept <em>Baseconcept</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,16 +44,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBaseconcept() <em>Baseconcept</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseconcept()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BaseConcept> baseconcept;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,40 +91,11 @@ public class OutputImpl extends NamedElementImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BaseConcept> getBaseconcept() {
-		if (baseconcept == null) {
-			baseconcept = new EObjectContainmentEList<BaseConcept>(BaseConcept.class, this,
-					StatemachinePackage.OUTPUT__BASECONCEPT);
-		}
-		return baseconcept;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case StatemachinePackage.OUTPUT__BASECONCEPT:
-			return ((InternalEList<?>) getBaseconcept()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case StatemachinePackage.OUTPUT__DESCRIPTION:
 			return getDescription();
-		case StatemachinePackage.OUTPUT__BASECONCEPT:
-			return getBaseconcept();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,10 +112,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 		case StatemachinePackage.OUTPUT__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case StatemachinePackage.OUTPUT__BASECONCEPT:
-			getBaseconcept().clear();
-			getBaseconcept().addAll((Collection<? extends BaseConcept>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -182,9 +127,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 		case StatemachinePackage.OUTPUT__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case StatemachinePackage.OUTPUT__BASECONCEPT:
-			getBaseconcept().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,8 +141,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 		switch (featureID) {
 		case StatemachinePackage.OUTPUT__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case StatemachinePackage.OUTPUT__BASECONCEPT:
-			return baseconcept != null && !baseconcept.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -222,8 +162,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 			switch (derivedFeatureID) {
 			case StatemachinePackage.OUTPUT__DESCRIPTION:
 				return StatemachinePackage.ELEMENT__DESCRIPTION;
-			case StatemachinePackage.OUTPUT__BASECONCEPT:
-				return StatemachinePackage.ELEMENT__BASECONCEPT;
 			default:
 				return -1;
 			}
@@ -248,8 +186,6 @@ public class OutputImpl extends NamedElementImpl implements Output {
 			switch (baseFeatureID) {
 			case StatemachinePackage.ELEMENT__DESCRIPTION:
 				return StatemachinePackage.OUTPUT__DESCRIPTION;
-			case StatemachinePackage.ELEMENT__BASECONCEPT:
-				return StatemachinePackage.OUTPUT__BASECONCEPT;
 			default:
 				return -1;
 			}

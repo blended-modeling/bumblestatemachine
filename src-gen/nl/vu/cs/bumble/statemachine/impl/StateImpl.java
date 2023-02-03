@@ -2,8 +2,6 @@
  */
 package nl.vu.cs.bumble.statemachine.impl;
 
-import java.util.Collection;
-
 import nl.vu.cs.bumble.statemachine.BaseConcept;
 import nl.vu.cs.bumble.statemachine.Element;
 import nl.vu.cs.bumble.statemachine.Input;
@@ -12,17 +10,10 @@ import nl.vu.cs.bumble.statemachine.State;
 import nl.vu.cs.bumble.statemachine.StatemachinePackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +24,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateImpl#getBaseconcept <em>Baseconcept</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateImpl#getOutput <em>Output</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.StateImpl#getInput <em>Input</em>}</li>
  * </ul>
@@ -60,16 +50,6 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBaseconcept() <em>Baseconcept</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseconcept()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BaseConcept> baseconcept;
 
 	/**
 	 * The cached value of the '{@link #getOutput() <em>Output</em>}' reference.
@@ -130,19 +110,6 @@ public class StateImpl extends NamedElementImpl implements State {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatemachinePackage.STATE__DESCRIPTION,
 					oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<BaseConcept> getBaseconcept() {
-		if (baseconcept == null) {
-			baseconcept = new EObjectContainmentEList<BaseConcept>(BaseConcept.class, this,
-					StatemachinePackage.STATE__BASECONCEPT);
-		}
-		return baseconcept;
 	}
 
 	/**
@@ -230,26 +197,10 @@ public class StateImpl extends NamedElementImpl implements State {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case StatemachinePackage.STATE__BASECONCEPT:
-			return ((InternalEList<?>) getBaseconcept()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case StatemachinePackage.STATE__DESCRIPTION:
 			return getDescription();
-		case StatemachinePackage.STATE__BASECONCEPT:
-			return getBaseconcept();
 		case StatemachinePackage.STATE__OUTPUT:
 			if (resolve)
 				return getOutput();
@@ -274,10 +225,6 @@ public class StateImpl extends NamedElementImpl implements State {
 		case StatemachinePackage.STATE__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case StatemachinePackage.STATE__BASECONCEPT:
-			getBaseconcept().clear();
-			getBaseconcept().addAll((Collection<? extends BaseConcept>) newValue);
-			return;
 		case StatemachinePackage.STATE__OUTPUT:
 			setOutput((Output) newValue);
 			return;
@@ -299,9 +246,6 @@ public class StateImpl extends NamedElementImpl implements State {
 		case StatemachinePackage.STATE__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case StatemachinePackage.STATE__BASECONCEPT:
-			getBaseconcept().clear();
-			return;
 		case StatemachinePackage.STATE__OUTPUT:
 			setOutput((Output) null);
 			return;
@@ -322,8 +266,6 @@ public class StateImpl extends NamedElementImpl implements State {
 		switch (featureID) {
 		case StatemachinePackage.STATE__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case StatemachinePackage.STATE__BASECONCEPT:
-			return baseconcept != null && !baseconcept.isEmpty();
 		case StatemachinePackage.STATE__OUTPUT:
 			return output != null;
 		case StatemachinePackage.STATE__INPUT:
@@ -349,8 +291,6 @@ public class StateImpl extends NamedElementImpl implements State {
 			switch (derivedFeatureID) {
 			case StatemachinePackage.STATE__DESCRIPTION:
 				return StatemachinePackage.ELEMENT__DESCRIPTION;
-			case StatemachinePackage.STATE__BASECONCEPT:
-				return StatemachinePackage.ELEMENT__BASECONCEPT;
 			default:
 				return -1;
 			}
@@ -375,8 +315,6 @@ public class StateImpl extends NamedElementImpl implements State {
 			switch (baseFeatureID) {
 			case StatemachinePackage.ELEMENT__DESCRIPTION:
 				return StatemachinePackage.STATE__DESCRIPTION;
-			case StatemachinePackage.ELEMENT__BASECONCEPT:
-				return StatemachinePackage.STATE__BASECONCEPT;
 			default:
 				return -1;
 			}

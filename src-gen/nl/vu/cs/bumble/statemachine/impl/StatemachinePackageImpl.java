@@ -197,15 +197,6 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Baseconcept() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStateMachine() {
 		return stateMachineEClass;
 	}
@@ -242,7 +233,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStateMachine_Input() {
+	public EReference getStateMachine_Inputs() {
 		return (EReference) stateMachineEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -251,7 +242,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStateMachine_Output() {
+	public EReference getStateMachine_Outputs() {
 		return (EReference) stateMachineEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -260,7 +251,7 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStateMachine_Transition() {
+	public EReference getStateMachine_Transitions() {
 		return (EReference) stateMachineEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -390,15 +381,14 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__DESCRIPTION);
-		createEReference(elementEClass, ELEMENT__BASECONCEPT);
 
 		stateMachineEClass = createEClass(STATE_MACHINE);
 		createEReference(stateMachineEClass, STATE_MACHINE__CURRENTINPUT);
 		createEReference(stateMachineEClass, STATE_MACHINE__CURRENTSTATE);
 		createEReference(stateMachineEClass, STATE_MACHINE__CURRENTOUTPUT);
-		createEReference(stateMachineEClass, STATE_MACHINE__INPUT);
-		createEReference(stateMachineEClass, STATE_MACHINE__OUTPUT);
-		createEReference(stateMachineEClass, STATE_MACHINE__TRANSITION);
+		createEReference(stateMachineEClass, STATE_MACHINE__INPUTS);
+		createEReference(stateMachineEClass, STATE_MACHINE__OUTPUTS);
+		createEReference(stateMachineEClass, STATE_MACHINE__TRANSITIONS);
 		createEReference(stateMachineEClass, STATE_MACHINE__STATES);
 
 		inputEClass = createEClass(INPUT);
@@ -467,9 +457,6 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Element.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Baseconcept(), this.getBaseConcept(), null, "baseconcept", null, 0, -1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateMachineEClass, StateMachine.class, "StateMachine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -482,13 +469,13 @@ public class StatemachinePackageImpl extends EPackageImpl implements Statemachin
 		initEReference(getStateMachine_Currentoutput(), this.getOutput(), null, "currentoutput", null, 0, 1,
 				StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStateMachine_Input(), this.getInput(), null, "input", null, 0, -1, StateMachine.class,
+		initEReference(getStateMachine_Inputs(), this.getInput(), null, "inputs", null, 0, -1, StateMachine.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStateMachine_Output(), this.getOutput(), null, "output", null, 0, -1, StateMachine.class,
+		initEReference(getStateMachine_Outputs(), this.getOutput(), null, "outputs", null, 0, -1, StateMachine.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStateMachine_Transition(), this.getTransition(), null, "transition", null, 0, -1,
+		initEReference(getStateMachine_Transitions(), this.getTransition(), null, "transitions", null, 0, -1,
 				StateMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStateMachine_States(), this.getState(), null, "states", null, 0, -1, StateMachine.class,

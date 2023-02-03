@@ -2,24 +2,12 @@
  */
 package nl.vu.cs.bumble.statemachine.impl;
 
-import java.util.Collection;
-
-import nl.vu.cs.bumble.statemachine.BaseConcept;
 import nl.vu.cs.bumble.statemachine.Element;
 import nl.vu.cs.bumble.statemachine.StatemachinePackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +18,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link nl.vu.cs.bumble.statemachine.impl.ElementImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.impl.ElementImpl#getBaseconcept <em>Baseconcept</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,16 +42,6 @@ public abstract class ElementImpl extends BaseConceptImpl implements Element {
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getBaseconcept() <em>Baseconcept</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseconcept()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BaseConcept> baseconcept;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,40 +89,11 @@ public abstract class ElementImpl extends BaseConceptImpl implements Element {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BaseConcept> getBaseconcept() {
-		if (baseconcept == null) {
-			baseconcept = new EObjectContainmentEList<BaseConcept>(BaseConcept.class, this,
-					StatemachinePackage.ELEMENT__BASECONCEPT);
-		}
-		return baseconcept;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case StatemachinePackage.ELEMENT__BASECONCEPT:
-			return ((InternalEList<?>) getBaseconcept()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case StatemachinePackage.ELEMENT__DESCRIPTION:
 			return getDescription();
-		case StatemachinePackage.ELEMENT__BASECONCEPT:
-			return getBaseconcept();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,10 +110,6 @@ public abstract class ElementImpl extends BaseConceptImpl implements Element {
 		case StatemachinePackage.ELEMENT__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case StatemachinePackage.ELEMENT__BASECONCEPT:
-			getBaseconcept().clear();
-			getBaseconcept().addAll((Collection<? extends BaseConcept>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -181,9 +125,6 @@ public abstract class ElementImpl extends BaseConceptImpl implements Element {
 		case StatemachinePackage.ELEMENT__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case StatemachinePackage.ELEMENT__BASECONCEPT:
-			getBaseconcept().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,8 +139,6 @@ public abstract class ElementImpl extends BaseConceptImpl implements Element {
 		switch (featureID) {
 		case StatemachinePackage.ELEMENT__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case StatemachinePackage.ELEMENT__BASECONCEPT:
-			return baseconcept != null && !baseconcept.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

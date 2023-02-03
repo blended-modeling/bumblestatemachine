@@ -16,9 +16,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getCurrentinput <em>Currentinput</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getCurrentstate <em>Currentstate</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getCurrentoutput <em>Currentoutput</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getInput <em>Input</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getOutput <em>Output</em>}</li>
- *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getTransition <em>Transition</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link nl.vu.cs.bumble.statemachine.StateMachine#getStates <em>States</em>}</li>
  * </ul>
  *
@@ -94,40 +94,40 @@ public interface StateMachine extends BaseConcept, NamedElement {
 	void setCurrentoutput(Output value);
 
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
 	 * The list contents are of type {@link nl.vu.cs.bumble.statemachine.Input}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' containment reference list.
-	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Input()
+	 * @return the value of the '<em>Inputs</em>' containment reference list.
+	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Inputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Input> getInput();
+	EList<Input> getInputs();
 
 	/**
-	 * Returns the value of the '<em><b>Output</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference list.
 	 * The list contents are of type {@link nl.vu.cs.bumble.statemachine.Output}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output</em>' containment reference list.
-	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Output()
+	 * @return the value of the '<em>Outputs</em>' containment reference list.
+	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Outputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Output> getOutput();
+	EList<Output> getOutputs();
 
 	/**
-	 * Returns the value of the '<em><b>Transition</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
 	 * The list contents are of type {@link nl.vu.cs.bumble.statemachine.Transition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transition</em>' containment reference list.
-	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Transition()
+	 * @return the value of the '<em>Transitions</em>' containment reference list.
+	 * @see nl.vu.cs.bumble.statemachine.StatemachinePackage#getStateMachine_Transitions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Transition> getTransition();
+	EList<Transition> getTransitions();
 
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' containment reference list.
